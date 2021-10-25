@@ -13,7 +13,7 @@ const cambiarCantidad = (idProducto, valor) => {
 }
 
 document.addEventListener("DOMContentLoaded", function(e){
-    getJSONData(CART_INFO_URL).then(function(resultObj){
+    getJSONData('https://japdevdep.github.io/ecommerce-api/cart/654.json').then(function(resultObj){
         if (resultObj.status === "ok")
         {
             let nameProdHTML = document.getElementById("container");

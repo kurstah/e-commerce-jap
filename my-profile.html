@@ -53,14 +53,111 @@
       </div>
     </div>
   </nav>
+  
   <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 6 (Fecha de entrega: 31/10/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+    <div class="text-center my-4">
+      <h2>Editar perfil</h2>
     </div>
+
+    <div class="row">
+          <div class="col-sm-6 mb-4">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="ariaNombre">Nombre</span>
+          </div>
+          <input id="uName" type="text" class="form-control" placeholder="Nombre" aria-label="ariaNombre" aria-describedby="ariaNombre">
+        </div>
+      </div>
+    
+      <div class="col-sm-6 mb-4">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="ariaApellido">Apellido</span>
+          </div>
+          <input id="uSurname" type="text" class="form-control" placeholder="Apellido" aria-label="ariaApellido" aria-describedby="ariaApellido">
+        </div>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-sm-6 mb-4">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="ariaEdad">Edad</span>
+          </div>
+          <input id="uAge" type="number" class="form-control" placeholder="Edad" aria-label="ariaEdad" aria-describedby="ariaEdad">
+        </div>
+      </div>
+    </div>
+   
+    <div class="row">
+      <div class="col-sm-6 mb-4">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="ariaEmail">Email</span>
+          </div>
+          <input id="uEmail" type="text" class="form-control" placeholder="Email" aria-label="ariaEmail" aria-describedby="ariaEmail">
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-sm-6 mb-4">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="ariaTelefono">Teléfono</span>
+          </div>
+          <input id="uPhone" type="text" class="form-control" placeholder="Teléfono" aria-label="ariaTelefono" aria-describedby="ariaTelefono">
+        </div>
+      </div>
+    </div>
+   
+    <div class="row">
+      <div class="col-sm-6 my-4">
+        <button type="button" class="btn btn-primary" onclick="saveChanges()">Guardar cambios</button>
+      </div>
   </div>
+
+  <div class="container p-5">
+    <div class="text-center my-4">
+      <h2>Mi Perfil</h2>
+    </div>
+
+    <div>
+      <div>
+        <span>Nombre</span>
+      </div>
+      <p id="mName" type="text"></p>
+    </div>
+
+    <div>
+      <div>
+        <span>Apellido</span>
+      </div>
+      <p id="mSurname" type="text"></p>
+    </div>
+
+    <div>
+      <div>
+        <span>Edad</span>
+      </div>
+      <p id="mAge" type="number"></p>
+    </div>
+
+    <div>
+      <div>
+        <span>Email</span>
+      </div>
+      <p id="mEmail" type="email"></p>
+    </div> 
+
+    <div>
+      <div>
+        <span>Telefono</span>
+      </div>
+      <p id="mPhone"></p>
+    </div>
+
   <footer class="text-muted bg-light">
     <div class="container">
       <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
