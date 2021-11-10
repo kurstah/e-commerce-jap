@@ -68,8 +68,8 @@
     </div>
   </div>
 
-
-   <!--  <form class="needs-validation" id="buyForm">
+<div>
+<form class="needs-validation" id="buyForm">
     <hr class="mb-4">
     <h4 class="mb-3">Tipo de envío</h4>
     <div class="d-block my-3">
@@ -97,7 +97,7 @@
         </div>
         <div class="col-md-4 mb-3">
             <label for="shippingStreetNumber">Número</label>
-            <input type="number" class="form-control" id="shippingStreetNumber" placeholder="" value="">
+            <input type="number" class="form-control" id="shippingStreetNumber" placeholder="" value="" type="required">
         </div>
     </div>
     <div class="row">
@@ -109,40 +109,107 @@
           </div>
         </div>
     </div>
-    <hr class="mb-4">
-    <div class="row">
-      <div class="col">
-        <h4 class="mb-3">Costos</h4>
-        <ul class="list-group mb-3">
-            <li class="list-group-item d-flex justify-content-between lh-condensed">
-              <div>
-                <h6 class="my-0">Subtotal</h6>
-                <small class="text-muted">Costo unitario del producto por cantidad</small>
-              </div>
-              <span class="text-muted" id="subtotalText">UYU 300</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between lh-condensed">
-              <div>
-                <h6 class="my-0">Costo de envío</h6>
-                <small class="text-muted">Según el tipo de envío</small>
-              </div>
-              <span class="text-muted" id="shippingText">UYU 9</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between">
-              <span>Total ($)</span>
-              <strong id="totalCostText">UYU 309</strong>
-            </li>
-          </ul>
+  </div>
+
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Método de pago
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Forma de pago</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        
+        <form action="" method="get">
+          <div class="form-row container-fluid">
+            <div class="col-md-12">
+              <input class="form-check-input" type="radio" name="tarjetaOCuenta" id="tarjetaDeCredito" value="pagoTarjeta" form="datos-envio" checked>
+              <label class="form-check-label" for="tarjetaDeCredito">
+                Tarjeta de crédito
+              </label>
+              <hr>
+            </div>
+
+            <div class="col-md-6">
+              <label for="numeroTarjeta">Numero de tarjeta:</label>
+              <input type="number" id="numeroTarjeta" name="nroTarjeta" form="datos-envio">
+            </div>
+            <div class="col-md-6">  
+              <label for="codigoSeguridad">Codigo de seguridad:</label>
+              <input type="number" id="codigoSeguridad" name="codigoDeSeguridadTarjeta" class="product-cuantity-input" form="datos-envio">
+            </div>
+            <div class="col-md-6">
+              <label for="vencimientoTarjeta">Vencimiento (MM/AA):</label>
+              <input type="datetime" id="vencimientoTarjeta" name="vencimTarjeta" class="product-cuantity-input" form="datos-envio">
+            </div>
+
+            <div class="col-md-12 mb-2">
+              <hr>
+              <input class="form-check-input" type="radio" name="tBancaria" id="transferenciaBancaria" value="Transferencia" form="datos-envio">
+              <label class="form-check-label" for="transferenciaBancaria">
+                Transferencia Bancaria
+              </label>
+            </div>  
+            <div class="col-md-6">
+              <label for="numeroCuentaBancaria">Numero de cuenta:</label>
+              <input type="number" id="numeroCuentaBancaria" name="nroCuenta" form="datos-envio">
+            </div>
+          </div>
+        </form>
+      </div>
+
+      </div>
+
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Descartar</button>
+        <button type="submit" class="btn btn-primary" form="datos-envio" data-dismiss="modal" id="chequear">Guardar método de pago</button>
       </div>
     </div>
-    <hr class="mb-4">
-    <div class="row">
+  </div>
+</div>
       
+<!-- COSTOS -->
+<br>
+<br>
+<h4 class="mb-3">Costos</h4>
+              <ul class="list-group mb-3">
+                  <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                      <h6 class="my-0">Precio</h6>
+                      <small class="text-muted">Subtotal</small>
+                    </div>
+                    <span class="text-muted" id="productCostText">-</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                      <h6 class="my-0">Porcentaje</h6>
+                      <small class="text-muted">Según el tipo de envío</small>
+                    </div>
+                    <span class="text-muted" id="comissionText">-</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between">
+                    <span>Total ($)</span>
+                    <strong id="totalCostText">-</strong>
+                  </li>
+                </ul>
+
+
     </div>
     <div class="row">
         <button class="btn btn-primary btn-lg my-5" type="submit">Finalizar compra</button>
     </div>
-  </form>  -->
+  </form>  
+
 
   <div id="spinner-wrapper">
     <div class="lds-ring">
